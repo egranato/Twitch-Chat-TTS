@@ -1,10 +1,10 @@
 require('dotenv').config()
 const express = require('express');
 const TwitchBot = require('twitch-bot');
-const censor = require('./censor');
+const censor = require('./lib/censor');
 const tts = require('./lib/tts');
-const playAudio = require('./audio-player');
-const PromiseQueue = require('./promiseQueue');
+const playAudio = require('./lib/audio-player');
+const PromiseQueue = require('./lib/promiseQueue');
 
 const BOT_NAME = process.env.BOT_NAME;
 const TWITCH_CHANNEL = process.env.TWITCH_CHANNEL;
