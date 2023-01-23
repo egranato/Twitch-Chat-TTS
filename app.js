@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express');
 const TwitchBot = require('twitch-bot');
 const censor = require('./censor');
-const tts = require('./tts');
+const tts = require('./lib/tts');
 const playAudio = require('./audio-player');
 const PromiseQueue = require('./promiseQueue');
 
