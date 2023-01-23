@@ -4,7 +4,7 @@
 [Node JS](https://nodejs.org/en/download/)
 
 ## Clone this app
-Run `npm i`
+Clone the repo and run `npm i` to install dependencies
 
 ## Get OAuth token
 Go to [here](https://twitchapps.com/tmi/) to get an OAuth token
@@ -19,4 +19,5 @@ TWITCH_OAUTH=oauth:{your token} (from the previous step)
 ```
 
 ## Run the app
-`npm start`
+Start with `npm start`
+Stop with `ctrl`+`c`
