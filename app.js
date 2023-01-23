@@ -6,6 +6,8 @@ const tts = require('./lib/tts');
 const playAudio = require('./audio-player');
 const PromiseQueue = require('./promiseQueue');
 
+const BOT_NAME = process.env.BOT_NAME;
+const TWITCH_CHANNEL = process.env.TWITCH_CHANNEL;
 const TWITCH_OAUTH = process.env.TWITCH_OAUTH;
 
 const app = express();
@@ -22,14 +24,14 @@ const triggerTTS = async (message) => {
 }
 
 const bot = new TwitchBot({
-  username: 'abirddad',
+  username: BOT_NAME,
   oauth: TWITCH_OAUTH,
-  channels: ['abirddad']
+  channels: [TWITCH_CHANNEL]
 });
 
-const sayInChat = (message) => {
-  bot.say(message);
-}
+// const sayInChat = (message) => {
+//   bot.say(message);
+// }
 
 bot.on('join', channel => {
   console.log(`Joined channel: ${channel}`);
